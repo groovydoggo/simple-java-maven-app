@@ -17,7 +17,7 @@ pipeline {
             }
             post {
                 always {
-                    archiveArtifacts artifacts: '**/*.jar', fingerprint: true
+                    archiveArtifacts artifacts: '**/*.jar', fingerprint: true // archive here: /var/lib/jenkins/jobs/
 		    junit 'target/surefire-reports/*.xml' 
                 }
             }
